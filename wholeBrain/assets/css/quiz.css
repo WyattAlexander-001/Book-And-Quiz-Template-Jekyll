@@ -1,0 +1,13 @@
+.quiz-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  .quizdown li.correct {
+    color: green;
+  }
+  .quizdown li.incorrect {
+    color: red;
+    text-decoration: line-through;
+  }

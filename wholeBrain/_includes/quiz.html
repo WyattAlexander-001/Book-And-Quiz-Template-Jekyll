@@ -1,0 +1,12 @@
+{% assign questions = site.data.quizzes[include.id] %}
+
+<div class="quiz">
+  {% for q in questions %}
+    <p><strong>{{ q.question }}</strong></p>
+    <ol type="A">
+      {% for choice in q.choices %}
+        <li>{{ choice }}</li>
+      {% endfor %}
+    </ol>
+  {% endfor %}
+</div>

@@ -1,0 +1,8 @@
+ch1:
+  - question: "Which part of the brain handles logic and planning?"
+    choices:  ["Upstairs brain", "Downstairs brain", "Amygdala"]
+    answer:   0
+ch2:
+  - question: "Name the two‑step strategy for integration."
+    choices:  ["Connect & Redirect", "Engage & Distract", "Label & Explain"]
+    answer:   0
