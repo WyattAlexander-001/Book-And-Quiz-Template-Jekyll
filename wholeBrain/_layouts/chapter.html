@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>{% include head.html %}</head>
-<body>
-  <main class="chapter">
-    {{ content }}
-    {% include quiz.html id=page.quiz_id %}
-  </main>
-</body>
-</html>
+---
+layout: default
+---
+
+<article class="chapter">
+  {{ content }}
+
+  {% if page.quiz_id %}
+  <hr>
+  <h2>Quiz</h2>
+  {% include quiz.html id=page.quiz_id %}
+  {% endif %}
+
+  {%- comment -%}▼ reliable next / previous logic ▼{%- endcomment -%}
+  {% assign sorted = site.chapters | sort: "weight" %}
+
+  {% assign prev = nil %}
+  {% assign next = nil %}
+  {% for ch in sorted %}
+    {% if ch.url == page.url %}
+      {% unless forloop.first %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign prev = sorted[prev_index] %}
+      {% endunless %}
+
+      {% unless forloop.last %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+        {% assign next = sorted[next_index] %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  <p class="nav">
+    {% if prev %}<a href="{{ prev.url }}">← {{ prev.title }}</a> | {% endif %}
+    <a href="/chapters/">Back to Chapters</a> | <a href="/">Home</a>
+    {% if next %} | <a href="{{ next.url }}">{{ next.title }} →</a>{% endif %}
+  </p>
+</article>
