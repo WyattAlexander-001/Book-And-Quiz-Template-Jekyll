@@ -1,0 +1,31 @@
+{% assign qs = site.data.quizzes[include.id] %}
+<div class="quiz" data-quiz="{{ include.id }}">
+  {% for q in qs %}
+    <div class="question">
+      <p><strong>{{ q.question }}</strong></p>
+
+      <ol type="A" class="choices">
+        {% assign qnum = forloop.index0 %}
+        {% for c in q.choices %}
+          {% assign i = forloop.index0 %}
+
+          {%- if i == q.answer -%}
+            {% assign flag = "true"  %}
+          {%- else -%}
+            {% assign flag = "false" %}
+          {%- endif -%}
+
+          <li>
+            <label class="choice" data-correct="{{ flag }}">
+              <input type="radio" name="q{{ include.id }}_{{ qnum }}" />
+              <span class="letter"></span>
+              <span class="text">{{ c }}</span>
+            </label>
+          </li>
+        {% endfor %}
+      </ol>
+
+      <p class="feedback" hidden></p>
+    </div>
+  {% endfor %}
+</div>

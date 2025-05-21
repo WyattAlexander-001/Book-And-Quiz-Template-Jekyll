@@ -1,0 +1,16 @@
+---
+layout: default
+title: Quizzes
+---
+
+<h2 id="quiz-title">Quiz</h2>
+<div id="quiz-container">
+  <p>Select a quiz above.</p>
+</div>
+
+<script>
+// -- dump all quiz data into JS at build time --
+const QUIZ_DATA = {{ site.data.quizzes | jsonify }};
+</script>
+
+<script src="/assets/dynamic-quiz.js"></script>
