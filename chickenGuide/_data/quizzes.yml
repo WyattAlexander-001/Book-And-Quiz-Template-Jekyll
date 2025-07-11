@@ -1,16 +1,13 @@
-# chapter‑1 has TWO checkpoints
-ch1_q1:
-  - question: "Which part of the brain handles logic and planning?"
-    choices:  ["Upstairs brain", "Downstairs brain", "Amygdala"]
-    answer:   0
-
-ch1_q2:
-  - question: "Which hemisphere processes emotions and non‑verbal cues?"
-    choices:  ["Left", "Right", "Both equally"]
-    answer:   1
-
-# chapter‑2, one checkpoint
-ch2_q1:
-  - question: "What are the two steps in the Connect & Redirect strategy?"
-    choices: ["Connect + Redirect", "Name + Tame", "Engage + Distract"]
-    answer: 0
+ch0:
+  - q: "Which of these is **not** a reason people keep backyard chickens?"
+    options:
+      - Fresh eggs
+      - Pest control
+      - Guard duty
+      - Garden fertiliser
+    answer: "Guard duty"
+    explanation: "Even noisy breeds aren’t much good as watchdogs."
+  - q: "A hen needs roughly ___ hours of daylight to lay reliably."
+    options: [ "4", "10", "14", "20" ]
+    answer: "14"
+    explanation: "Daylight triggers the hormones that start egg production."

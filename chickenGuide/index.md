@@ -6,7 +6,6 @@ permalink: /
 
 ## Welcome!
 
-![YOO](./assets/images/hen.png)
 
 **Chickens** are the most popular pets in the world, and they're great for
 integrating the “upstairs” logic brain with the “downstairs” emotional brain.
