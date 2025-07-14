@@ -11,3 +11,6 @@ bundle exec jekyll serve
 
 Images of Progress:
 ![Quiz](./git_images/quiz.PNG)
+
+Added Nice Buttons:
+![Quiz](./git_images/button_fix.png)
