@@ -1,4 +1,8 @@
-# chapter‑1 has TWO checkpoints
+ch0_q1:
+  - question: "Are you ready to learn about chickens?"
+    choices: ["Yes", "No"]
+    answer: 0
+
 ch1_q1:
   - question: "Which part of the brain handles logic and planning?"
     choices:  ["Upstairs brain", "Downstairs brain", "Amygdala"]

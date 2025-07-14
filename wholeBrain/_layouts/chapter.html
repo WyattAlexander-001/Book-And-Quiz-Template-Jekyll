@@ -4,13 +4,6 @@ layout: default
 
 <article class="chapter">
   {{ content }}
-
-  {% if page.quiz_id %}
-  <hr>
-  <h2>Quiz</h2>
-  {% include quiz.html id=page.quiz_id %}
-  {% endif %}
-
   {%- comment -%}▼ reliable next / previous logic ▼{%- endcomment -%}
   {% assign sorted = site.chapters | sort: "weight" %}
 
